@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Powered Chat||Master Web Developers</title>
+    <link rel="icon" href="Logo(black).png">
+    <script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/147c7efcf5.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+    body {
+        font-family: 'Dancing Script', cursive;
+        font-size: 25px;
+    }
+
+    #chat_nav {
+        background: rgb(1, 4, 44);
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        box-shadow: black 0px 9px 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    #message {
+        padding: 10px;
+        position: fixed;
+        margin: 0;
+        outline: none;
+        bottom: 0;
+        width: 100%;
+        overflow-y: hidden;
+        border: none;
+        border-top: 2px solid black;
+        left: 0%;
+    }
+
+    #send {
+        padding: 10px;
+        position: fixed;
+        margin: 0;
+        outline: none;
+        bottom: 0;
+        width: 20vw;
+        overflow-y: hidden;
+        border: none;
+        border-top: 2px solid black;
+        right: 0%;
+        background: rgb(2, 255, 242);
+        color: #fff;
+        cursor: pointer;
+        border-left: 2px solid black;
+    }
+
+    #bot {
+        margin: 10px;
+        margin-top: 200px;
+        float: left;
+        background: rgb(165, 168, 165);
+        border-radius: 10px;
+        padding: 5px;
+        text-transform: capitalize;
+    }
+    #message{
+        text-transform: lowercase;
+    }
+    
+    #u{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        margin-top: 200px;
+        float: right;
+        border: 3px solid rgb(0, 119, 255);
+        border-radius: 50%;
+        padding: 5px; 
+    }
+    #user {
+        margin: 10px;
+        margin-top: 200px;
+        float: right;
+        background: rgb(0, 119, 255);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    #back{
+        padding: 5px;
+        margin: 5px;
+    }
+    #b{
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        margin-top: 200px;
+        float: left;
+        border: 3px solid rgb(165, 168, 165);
+        border-radius: 50%;
+        padding: 5px; 
+        color: rgb(87, 87, 87);
+    }
+</style>
+
+<body>
+    <div id="chat_nav">
+        <a href="index.html"><button id="back">< Back</button></a><i class="fas fa-robot" style="user-select: auto;"></i>AI Powered Chat
+    </div>
+    <div id="chat_box">
+       <div id="bot"><i class="fas fa-robot" style="user-select: auto;"></i>Bot:</div>
+        <div id="user">You:</div>
+    </div>
+    <input type="text" id="message" placeholder="Type To Chat......"><button id="send">Send!</button>
+
+</body>
+<script>
+    //Chat Bot
+    var inp = document.getElementById('message');
+    var bot = document.getElementById('bot');
+    var user = document.getElementById('user');
+    var send = document.getElementById('send');
+    var name = prompt("Kindly Enter Your Name To Proceed\n Note: All The Information You Enter Here Is Safe And Secure And Is Take Merely To provide You Have Experience Of Our Service");
+    bot.textContent = "Bot"+":"+"Hello "+name+" ! Welcome To Master Web Developers, Tell Me How Can I Help You"
+    
+    send.addEventListener("click", () => {
+        user.textContent = "You" + ":" + inp.value;
+        inp.value = "";
+
+         
+        if (user.textContent.includes("hello"||"Hello")) {
+        bot.textContent = "Bot"+":"+"Hello "+name+" ! Tell Me How Can I Help You";
+        }
+        else if(user.textContent.includes("contact"||"Contact")){
+        bot.textContent = "Bot"+":"+"Here Is The Page That Will Help You Get In Touch With Us"+" "+name;
+        window.open("contact_us.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("services"||"Services")){
+        bot.textContent = "Bot"+":"+"Here Is The Page"+" "+name;
+        window.open("index.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("blogs"||"Blogs")){
+        bot.textContent = "Bot"+":"+"This The Blogs Section"+" "+name;
+        window.open("blogs.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("call"||"Call")){
+        bot.textContent = "Bot"+":"+"Here Is The Page That Will Help You Call Us"+" "+name;
+        window.open("contact_us.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("email"||"Email")){
+        bot.textContent = "Bot"+":"+"Here Is The Page That Will Help You email Us"+" "+name;
+        window.open("contact_us.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("mail"||"Mail")){
+        bot.textContent = "Bot"+":"+"Here Is The Page That Will Help You email Us"+" "+name;
+        window.open("contact_us.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("help"||"Help")){
+        bot.textContent = "Bot"+":"+"Do Mail Us Or write You Query Here To get The Solution To Your Problem."+" "+name;
+        window.open("contact_us.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("skills"||"Skills")){
+        bot.textContent = "Bot"+":"+"Scroll To The Bottom Of This Page."+" "+name;
+        window.open("index.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("about"||"About")){
+        bot.textContent = "Bot"+":"+"Here Is The Page That Will Help You Get In Touch With Us"+" "+name;
+        window.open("portfolio.html","_blank","width=1000,height=1000,toolbar=no") 
+    }
+        else if(user.textContent.includes("website"||"Website")){
+        bot.textContent = "Bot"+":"+"Get In Touch With Us To Know More"+" "+name;
+        window.open("portfolio.html","_blank","width=1000,height=1000,toolbar=no") 
+    }    
+    });
+
+    /*inp.onkeyup(function(event){
+        if(event.keycode===13){
+        send.click();
+        };
+    })*/
+    
+inp.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        send.click();
+    }
+});
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp||Master Web Developers</title>
+    <link rel="icon" href="Logo(black).png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/147c7efcf5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="head">
+        <nav id="navbar">
+            <center>
+                <div id="logo"><img src="Logo(black).png" alt="#"></div>
+            </center>
+            <div id="menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+            <div id="menu2">
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+            </div>
+
+            <hr id="hr">
+
+            <ul id="nav-list">
+                <li><a href="index.html"><i class="fas fa-home" style="user-select: auto;"></i>Home</a></li>
+
+                <li><a href="blogs.html"><i class="fas fa-blog"></i>Blogs</a></li>
+
+                <li><a href="portfolio.html"><i class="fas fa-address-book"></i>Portfolios</a></li>
+
+                <li><a href="contact_us.html"><i class="fas fa-phone-alt"></i>Contact Us</a></li>
+
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i>FAQs</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <center>
+            <form id="signUp-form">
+                <h5>Name:</h5>  <input type="text" required id="userName-s"><br>
+                <h5>Email:</h5>  <input type="text" required id="userEmail-s"><br>
+                <h5>Password:</h5>  <input type="text" required id="userPass-s"><br>
+                <button id="SignUpBtn-s">SignUp</button>
+                <button id="LogInBtn-s">Login</button>
+        
+         </form>
+    </center>
+    <br>
+    <br>
+    <br> <span id="share">
+        <center><a href="https://api.whatsapp.com/send?text=http://mastereddevelopers.c1.biz/"><span id="wh"
+                    class="s"><img src="https://img.icons8.com/color/whatsapp" /></span></a>
+            <!----<a href="https://www.facebook.com/sharer/sharer.php?u=https://mastereddevelopers.c1.biz"><span class="s"><i class="fa-brands fa-facebook-f"></i></span>---></a><a
+                href="https://twitter.com/intent/tweet?url=http://mastereddevelopers.c1.biz/"><span class="s"><img
+                        src="https://img.icons8.com/color/twitter" /></span></a>
+        </center>
+    </span>
+
+    <footer class="foot">&copy; Copyright Alam Software Corporation. Pvt. Ltd</footer>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAiMN_wI0BFNWUVsJe3Wa6TQ9EVW8cbOkw",
+          authDomain: "masterwebdevloginsignup.firebaseapp.com",
+          projectId: "masterwebdevloginsignup",
+          storageBucket: "masterwebdevloginsignup.appspot.com",
+          messagingSenderId: "1097782723608",
+          appId: "1:1097782723608:web:a0ee5641e28a059f106f6d"
+        };
+      
+        var userName = document.getElementById("userName-s");
+        var userEmail = document.getElementById("userEmail-s");
+        var userPass = document.getElementById("userPass-s");
+        var SignUp = document.getElementById("SignUpBtn-s");
+        const app = initializeApp(firebaseConfig);
+        SignUp.addEventListener("click",()=>{
+            writeUserData();
+        })
+  function writeUserData() {
+  const db = getDatabase();
+  set(ref(db, userName + userName), {                                  
+    username: userName,
+    email: userEmail,
+    pass: userPass
+  });
+}
+      </script>
+</body>
+
+</html>

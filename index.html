@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Web Developers</title>
+    <link rel="icon" href="Logo(black).png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/147c7efcf5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="head">
+        <nav id="navbar">
+            <center><div id="logo"><img src="Logo(black).png" alt="#"></div></center>
+            <div id="menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+            <div id="menu2">
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+            </div>
+        
+            <hr id="hr">
+
+            <ul id="nav-list">
+                <li><a href="index.html"><i class="fas fa-home" style="user-select: auto;"></i>Home</a></li>
+                
+                <li><a href="blogs.html"><i class="fas fa-blog"></i>Blogs</a></li>
+                
+                <li><a href="portfolio.html"><i class="fas fa-address-book"></i>Portfolios</a></li>
+                
+                <li><a href="contact_us.html"><i class="fas fa-phone-alt"></i>Contact Us</a></li>
+                
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i>FAQs</a></li>
+               
+                <li><a href="tc.html"><i class="fas fa-terms"></i>Terms & Conditions</a></li>
+                
+                <!-- <li><a href="#" onclick="sear()" id="se"><i class="fas fa-search"></i>Search</a><input type="search" placeholder="Just Type To Search...." id="search"><button id="sb" >Search</button></li> -->
+            
+            </ul>
+        </nav>
+    </header>
+    <center><div id="out">
+        <div id="slide_show">
+            <br>
+            <center><p id="p"></p></center>
+            <br>
+            <a href="contact_us.html"><button id="git">Get In Touch</button></a>
+            <br><br>
+            <div id="dots">
+                <button id="1" onclick="one()" class="dot"></button>
+                <button id="2" onclick="two()" class="dot"></button>
+                <button id="3" onclick="three()" class="dot"></button>
+            </div>
+        </div>
+    </div></center>
+    
+    <div id="intro1">
+        To get along with this rapidly developing world we need to cope with all 
+        the aspects of technology & use it in the best way to move ahead. So here we 
+        are to help you reach the zenith. Get in pace with this fast world, get along
+         with <b><a href="portfolio.html" id="me"><u>Me</u></a></b>.
+        Are You An Enterpreneur? Or Want To Publish A Blog Then This Is The Correct
+         Place For You. an All In One Place For Your Web Dev Needs. I Have An Experience
+          of developing web sites and web apps i have developed for many different 
+          organizations and also tried my hands on <a style="color: white;" href="blogs.html"> Artificial Intelligence</a>
+        <br><center></center>
+    </div>
+    <div id="service"><h3>Services: </h3><br>
+        An Easy To Use & Access Website Or Web Application <span style="color: red;">*</span><br><br>
+        Legitimate & Secure<span style="color: red;">*</span><br><br>
+        A Better UI Experience<span style="color: red;">*</span><br><br>
+        On Time Delivery<span style="color: red;">*</span><br><br>   
+    </div><br>
+    <hr id="h">
+    <div id="skills">
+        <p id="p">Areas Of Skills:</p>
+        <br>
+        <br>
+        <div class="sk"><img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/><b>HTML 5</b></div>
+        <br>
+        <div class="sk"><img src="https://img.icons8.com/color/48/000000/css3.png"/><b>CSS 3</b></div>
+        <br>
+        <div class="sk"><img src="https://img.icons8.com/color/48/000000/javascript--v2.png"/><b>JavaScript</b></div>
+    <br>
+    We Use The In-Trend Languages And Softwares To Make Your Websites Not Only Look Good But Also Responsive Without Any Copyright Risks & Completely Legitimate. We Use Above Languages & Stylesheets To Bring Out The Best And Use The King Of Web Development, <b>JS</b>
+    </div>
+    <div id="c">
+        
+            <div id="att" ">
+                <div id="cr" onclick="cl()">x</div>
+                <a href="chat.html" style="text-decoration: none;color: #fff;"><div id="a">
+                    <center><i class="fas fa-robot" style="user-select: auto;"></i><br>
+                        Chat With Our Bot To Get Help!</center>
+                </div></a>
+            </div>
+        
+        <a href="chat.html" target="blank">         <button id="chat"><i class="fas fa-robot" style="user-select: auto;"></i>AI Powered Chat</button>
+        </a>
+    </div>
+    <span id="share"><center><a href="https://api.whatsapp.com/send?text=http://mastereddevelopers.c1.biz/"><span id="wh" class="s"><img src="https://img.icons8.com/color/whatsapp"/></span></a><!----<a href="https://www.facebook.com/sharer/sharer.php?u=https://mastereddevelopers.c1.biz"><span class="s"><i class="fa-brands fa-facebook-f"></i></span>---></a>
+     <a href="https://twitter.com/intent/tweet?url=http://mastereddevelopers.c1.biz/"><span class="s"><img src="https://img.icons8.com/color/twitter"/></span></a></center></span>
+    <footer class="foot">&copy; Copyright Alam Software Corporation. Pvt. Ltd</footer>
+</body>
+<script>
+    
+//navbar
+let nav = document.getElementById("navbar");
+let li = document.getElementById("nav-list");
+let menu = document.getElementById("menu");
+let menu2 = document.getElementById("menu2");
+let body = document.querySelector("body");
+let hr = document.getElementById("hr");
+let chat=document.getElementById("chat");
+let share=document.getElementById("share");
+
+
+
+menu.addEventListener("click",()=>{
+    nav.style.height = "100%"   
+    menu2.style.display = "block"
+    menu.style.display = "none"
+    chat.style.display = "none"
+    share.style.display = "none"
+    att.style.display = "none"
+    hr.style.display = "block"
+    body.style.overflow = "hidden" 
+    li.style.display = "block"
+    li.style.height = "70vh"
+})
+menu2.addEventListener("click",()=>{
+    nav.style.height = "100px"
+    li.style.display = "none"
+    li.style.height = "0px"
+    menu2.style.display = "none"
+    menu.style.display = "block"
+    hr.style.display = "none"
+    body.style.overflow = "visible"
+    chat.style.display = "block"
+    share.style.display = "block"
+    att.style.display = "block"
+    
+})
+
+//Typewriter Effect
+var i = 0;
+var txt = "A Website For Anyone & Everyone, Blogs Or Buisness.";
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("p").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter();
+
+
+//Image SlideShow
+let p = document.getElementById("p");
+let bg = document.getElementById("slide_show")
+
+
+function one(){
+  bg.style.backgroundImage = "url(photo1.jpg)"
+  p.style.color = "white";
+}
+function two(){
+  bg.style.backgroundImage = "url(photo2.jpg)"
+  p.style.color = "rgb(1, 4, 44)";
+  p.style.fontWeight = "1000";
+}
+function three(){
+  bg.style.backgroundImage = "url(photo3.jpg)"
+  p.style.color = "white";
+}
+setInterval(one,6000)
+setInterval(two,12000)
+setInterval(three,18000)
+let cut=document.getElementById("cr");
+let att=document.getElementById("att");
+
+function cl(){
+  att.style.display="none"
+}
+
+Notification.requestPermission().then(function(result) {
+    console.log(result);
+  });
+</script>
+
+</html>

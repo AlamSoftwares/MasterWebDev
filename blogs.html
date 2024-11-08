@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Web Developers</title>
+    <link rel="icon" href="Logo(black).png">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/147c7efcf5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="head">
+        <nav id="navbar">
+            <center>
+                <div id="logo"><img src="Logo(black).png" alt="#"></div>
+            </center>
+            <div id="menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+            <div id="menu2">
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+            </div>
+
+            <hr id="hr">
+
+            <ul id="nav-list">
+                <li><a href="index.html"><i class="fas fa-home" style="user-select: auto;"></i>Home</a></li>
+
+                <li><a href="blogs.html"><i class="fas fa-blog"></i>Blogs</a></li>
+
+                <li><a href="portfolio.html"><i class="fas fa-address-book"></i>Portfolios</a></li>
+
+                <li><a href="contact_us.html"><i class="fas fa-phone-alt"></i>Contact Us</a></li>
+
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i>FAQs</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- <input type="button" id="notification" onclick="ask()" value="Subscribe!">
+    <p style="color: gray;font-size: small;padding-left: 30px;">For Regular Updates</p> -->
+    <div id="blogs">
+        <details id="AI">
+            <summary>
+                <b>"AI & ML"</b>, What Are They? <br><br>
+                <center> <img src="aiml.png" style="height: 28vh;width: 35vw;" alt="AI & ML"></center>
+
+            </summary>
+            <p>
+                in your daily-life you might have come across a term, "AI" but what does this term make out
+                let's take a closer look.
+            </p>
+            <br>
+            <center>
+                <img id="cb" src="robo.jpg" alt="Clickbait Meaning" style="height: 28vh;width: 35vw;">
+            </center>
+            <p>
+                First,<br>
+                <b>"AI"</b>, this stands for <b>Artifcial Intelligence</b>is a subset of ML, software that runs on top
+                of machine learning layer and performs different functions
+                as directed by <b>"ML" that is Machine Learning</b> algorithms. It may require access different media
+                devices for input
+                such as ccamer, microphone, etc.
+                <br>Now,<br>
+                <b>Machine Learning</b> are deeply involved with robotics and engineers use this along with AI to
+                simulate
+                different machines, robots, etc. In this process the machine itself learns through different
+                mathematical algorithms fed in to the system.
+                for instance while using one of the most popular video sites "Youtube" suggests you what you are
+                interested in by analysing the topics on which you viewed most of the videos on
+                and this how the advanced tech use these. and most of us are certainly aware of AI and use them as
+                "Google", "Alexa" and other virtual assistants.
+            </p>
+        </details>
+        <hr>
+
+        <details id="clickbaits">
+            <summary>
+                What Are Clickbaits? <br><br>
+                <center> <img src="clickbait2.jpg" style="height: 28vh;width: 35vw;" alt="Clickbait"></center>
+
+            </summary>
+            <p>
+                You Might be unaware what clickbaits actually are and when you google it you find this:
+            </p>
+            <br>
+            <center>
+                <img id="cb" src="clickbait.png" alt="Clickbait Meaning" style="height: 28vh;width: 35vw;">
+            </center>
+            <p>
+                but is this the only literal meaning? we come across these as thumbnails of videos and image links
+                to websites but many of these work as traps for views and well some might also be used by some attackers
+                spread across the web waiting for you. these appear to be based on the topics that steal your attention
+                and these work quite effectively most people scrolling dwn the web do click on these. So Does This mean
+                That
+                Alll links, videos or articles are misleading? <b>"NO"</b> if the clickbait, thumbnails or titles match
+                the content
+                then it is not misleading like news sources, blogs and videos from safe sources are safe. But Still it
+                becomes
+                necessary for us to take care while scrolling through internet and not click on sites which appear
+                PHISHY and
+                use the tech in the correct way.
+            </p>
+        </details>
+
+        <br><br><br><br>
+    </div>
+    <br>
+    <hr>
+    <div id="comment">
+        <u id="h"><b>Type In Your Thoughts</b></u>
+        <input type="text" id="name" placeholder="Enter Your Name To Comment">
+        <textarea id="thought" placeholder="Type Your Thoughts" cols="30" rows="10"></textarea>
+        <input type="button" id="post" value="Post!">
+        <hr style="width: 70%;">
+        <u id="hii"><b>Comments:</b></u>
+        <br>
+        <div class="comms">
+            <p id="nm">User</p>
+            <p id="tht">Nice Comment!</p>
+        </div>
+    </div>
+    <br>
+    <br> <span id="share">
+        <center><a href="https://api.whatsapp.com/send?text=http://mastereddevelopers.c1.biz/"><span id="wh"
+                    class="s"><img src="https://img.icons8.com/color/whatsapp" /></span></a>
+            <!----<a href="https://www.facebook.com/sharer/sharer.php?u=https://mastereddevelopers.c1.biz"><span class="s"><i class="fa-brands fa-facebook-f"></i></span>---></a><a
+                href="https://twitter.com/intent/tweet?url=http://mastereddevelopers.c1.biz/"><span class="s"><img
+                        src="https://img.icons8.com/color/twitter" /></span></a>
+        </center>
+    </span>
+    <br><br>
+    <footer class="foot">&copy; Copyright Alam Software Corporation. Pvt. Ltd</footer>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { ref, getDatabase, set, get, update, remove, child } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyBR0BF2onzke4FopK9X8AuJRe4wAJvOzos",
+        authDomain: "comments-masterwebdevelopers.firebaseapp.com",
+        databaseURL: "https://comments-masterwebdevelopers-default-rtdb.firebaseio.com",
+        projectId: "comments-masterwebdevelopers",
+        storageBucket: "comments-masterwebdevelopers.appspot.com",
+        messagingSenderId: "592174958061",
+        appId: "1:592174958061:web:826ad724e295cd9721d3e4",
+        measurementId: "G-TVSY6K8ZW1"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    let name = document.getElementById("name");
+    let thought = document.getElementById("thought");
+    let post = document.getElementById("post");
+    const db = getDatabase();
+    post.addEventListener("click", () => {
+        addComment();
+        writeUserData();
+    })
+    var Id;
+    function addComment() {
+        const comm = document.createElement("div");
+        comm.classList.add('comms');
+        comm.innerHTML = `<p id="nm">${document.getElementById("name").value}</p>
+                          <p id="tht">${document.getElementById("thought").value}</p>
+                          `;
+        document.getElementById("comment").appendChild(comm);
+
+        const d = new Date();
+        var date = d.getMilliseconds();
+        Id = name.value + date;
+        console.log(Id);
+        getComments();
+    }
+    function writeUserData() {
+        set(ref(db, 'Users/' + Id), {
+            name: name.value,
+            comment: thought.value
+        })
+    }
+    function getComments() {
+        const dbRef = ref(db);
+        get(dbRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                var key = snapshot.key();
+                let dt= snapshot.val();
+                let json =  snapshot.toJSON();
+                
+                // for(let i=0;i<dt.length;i++){
+                //     console.log(dt);
+                // }
+                console.log(json['Users']);
+                console.log(dt);
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+    
+    }
+</script>
+
+</html>

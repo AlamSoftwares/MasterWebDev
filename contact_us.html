@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Web Developers</title>
+    <link rel="icon" href="Logo(black).png">
+    <link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+    <script defer src="https://kit.fontawesome.com/147c7efcf5.js" crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="0TtJonTRyub4iRsbZkp5WBzrBax0yfU0q4s9WadFlcs" />
+</head>
+<body>
+    <header id="head">
+        <nav id="navbar">
+            <center><div id="logo"><img src="Logo(black).png" alt="#"></div></center>
+            <div id="menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+            <div id="menu2">
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+                <div class="lines2"></div>
+            </div>
+        
+            <hr id="hr">
+
+            <ul id="nav-list">
+                <li><a href="index.html"><i class="fas fa-home" style="user-select: auto;"></i>Home</a></li>
+                
+                <li><a href="blogs.html"><i class="fas fa-blog"></i>Blogs</a></li>
+                
+                <li><a href="portfolio.html"><i class="fas fa-address-book"></i>Portfolios</a></li>
+                
+                <li><a href="contact_us.html"><i class="fas fa-phone-alt"></i>Contact Us</a></li>
+                
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i>FAQs</a></li>
+
+                
+                  
+            </ul>
+        </nav>
+    </header>
+    <a href="mailto:magcomputer169@gmail.com">
+        <div class="box">
+            <center>
+                <div class="icon"><a href="mailto:masterwebdevelopers.contact@gmail.com"><img src="email.png" alt="mail Us"></a></div>
+                <div class="det">Email Us At:</div>
+                <div class="cont"><a href="mailto:masterwebdevelopers.contact@gmail.com">masterwebdevelopers.contact@gmail.com</a></div>
+            </center>
+        </div>
+    </a>
+        <center id="cen">
+
+            Or
+
+        </center>
+        <div class="form">
+            <center>
+                <div class="det" style="padding-top: 15px;"><b id="give">Request A Call Back / Email:</b></div>
+                <form id="fc">
+                    <p class="p">Name:</p> <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                    <p class="p">Email:</p> <input type="email" id="email" name="email"
+                        placeholder="Enter Email Address" required>
+                    <p class="p">Phone No. :</p> <input type="tel" id="phoneno." name="phone no."
+                        placeholder="Enter Phone No." required>
+                    <p class="p">Write About Your Need:</p><textarea id="messagecont" placeholder="Write About Your Need!" cols="30" rows="10"></textarea>
+
+                    <center><input style="margin-bottom: 20px;" id="send" type="button" value="Submit"></center>
+                </form>
+            </center>
+        </div>    <span id="share"><center><a href="https://api.whatsapp.com/send?text=http://mastereddevelopers.c1.biz/"><span id="wh" class="s"><img src="https://img.icons8.com/color/whatsapp"/></span></a><!----<a href="https://www.facebook.com/sharer/sharer.php?u=https://mastereddevelopers.c1.biz"><span class="s"><i class="fa-brands fa-facebook-f"></i></span>---></a><a href="https://twitter.com/intent/tweet?url=http://mastereddevelopers.c1.biz/"><span class="s"><img src="https://img.icons8.com/color/twitter"/></span></a></center></span>
+
+    <footer class="foot">&copy; Copyright Alam Software Corporation. Pvt. Ltd</footer>
+   
+    
+</body>
+<script type="module">
+        
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyB65mf84GGnYL1Ag9QMQ4jRRSm4ApViw4Y",
+      authDomain: "contact-4c7b8.firebaseapp.com",
+      projectId: "contact-4c7b8",
+      storageBucket: "contact-4c7b8.appspot.com",
+      messagingSenderId: "313666876232",
+      appId: "1:313666876232:web:9caadef3bda8f2a38a397d"
+    };
+  
+    // Initialize Firebase
+  
+    const app = initializeApp(firebaseConfig);
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var message = document.getElementById("messagecont");
+    var phone = document.getElementById("phoneno.");
+    var send = document.getElementById("send");
+    
+    
+    function writeUserData() {
+    const db = getDatabase();
+    set(ref(db, 'data/' + "user"),{                                  
+    username: userName.value,
+    email: userEmail.value,
+    phone: phone.value,
+    messages: message.value
+    })
+  }
+  send.addEventListener("click",()=>{
+      writeUserData();
+      window.open("thanks.html");
+  });
+  
+  
+  // Initialize Firebase
+  
+  
+  
+       </script>
+</html>
